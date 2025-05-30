@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: url('/assets/cursor.png') x y, auto;
+}
+
+
+.s1{
+    /* background-color: pink; */
+    height:1000px;
+    width:500px;
+    border:1px solid white;
+    border-radius: 7px;
+    padding:auto;
+}
+
+.d1 img{
+    background-color: grey;
+    height:270px;
+    width:auto;
+    margin:10px;
+}
+
+marquee{
+    color:white;
+    padding:0px;
+}
