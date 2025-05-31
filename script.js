@@ -174,3 +174,107 @@
   
     init();
   })();
+
+
+// ****************************************************************************************
+
+window.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgMusic");
+  const playPauseBtn = document.getElementById("playPauseBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  const songs = [
+      "assets/audio/song1.mp3",
+      "assets/audio/song2.mp3",
+      "assets/audio/song3.mp3"
+  ];
+  let currentSongIndex = 0;
+  let isPlaying = true;
+
+  // Autoplay
+  music.play().catch(err => console.log("Autoplay might be blocked:", err));
+
+  // Play/Pause Button
+  playPauseBtn.addEventListener("click", () => {
+      if (isPlaying) {
+          music.pause();
+          playPauseBtn.src = "assets/player/stop.png"; // Showing stop icon when paused
+      } else {
+          music.play();
+          playPauseBtn.src = "assets/player/play.png"; // Showing play icon when playing
+      }
+      isPlaying = !isPlaying;
+  });
+
+  // Change song but keep current icon
+  function loadSong(index) {
+      music.src = songs[index];
+      music.play();
+      isPlaying = true;
+  }
+
+  // Prev Button
+  prevBtn.addEventListener("click", () => {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      loadSong(currentSongIndex);
+  });
+
+  // Next Button
+  nextBtn.addEventListener("click", () => {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      loadSong(currentSongIndex);
+  });
+
+  // When song ends, keep the icon to play
+  music.addEventListener("ended", () => {
+      playPauseBtn.src = "assets/player/play.png";
+      isPlaying = false;
+  });
+});
+
+
+
+
+
+
+// ************************************************************
+// RAIN
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const rainContainer = document.querySelector('.rain-container');
+  const dropCount = 40; // Not too many — tweak if needed
+
+  for (let i = 0; i < dropCount; i++) {
+    const drop = document.createElement('div');
+    drop.classList.add('pixel-drop');
+
+    drop.style.left = `${Math.random() * 100}vw`;
+    drop.style.top = `${-Math.random() * 100}px`;
+
+    rainContainer.appendChild(drop);
+
+    animateDrop(drop);
+  }
+
+  function animateDrop(drop) {
+    const duration = 2 + Math.random() * 2;
+    const delay = Math.random() * 5;
+
+    gsap.to(drop, {
+      y: '100vh',
+      duration: duration,
+      delay: delay,
+      ease: 'none',
+      repeat: -1,
+      repeatDelay: 0.5,
+      onRepeat: () => {
+        drop.style.left = `${Math.random() * 100}vw`;
+      }
+    });
+  }
+});
+
+

@@ -9,7 +9,7 @@
 <body>
     <!-- <img src="oneko.gif" id="cat-cursor" alt="Cat Cursor" /> -->
     <main class="s1">
-        <div class="d1">
+        <div class="imgfoot" style="padding-top:10px;">
             <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWJrODhrNjQ0N2ZkZ29nZzBjeXI0MWVuaTVmcGRhZWxlbmo2ZTRvaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1BgqtRVZH0w9OFefkf/giphy.gif">
         </div>
         <div class="marquee-wrapper">
@@ -23,34 +23,65 @@
               <span>Also have a look at my projects ─ ✦ ─</span>
             </div>
         </div><br>
+        <!-- Music Player -->
+        <div>
+            <div class="devider-t"></div>
+            <div class="player">
+                <div >
+                    <div>
+                        <img src="assets/player/prev.png" alt="previous" id="prevBtn" style="padding:0px 30px;">
+                    </div>
+                    <div>
+                        <img src="assets/player/play.png" alt="play" id="playPauseBtn">
+                    </div>
+                    <div>
+                        <img src="assets/player/next.png" alt="next" id="nextBtn" style="padding:0px 30px;">
+                    </div>
+                </div>
+            </div>
+            <div class="devider-d"></div>
+        </div>
         <!-- About Me -->
         <div>
-            <div>
-                <img src="assets/guy.gif" alt="guy gif" style="height: 100px; width: 100px; object-fit: cover; object-position: center;">
+            <div class="a1">
+                <div style="color: white;">
+                    <p class="head" style="font-size: 24px; margin:0px; padding-bottom: 10px;">[▣] About Me</p>
+                    <p class="sub1">- Anton Raj Singh</p>
+                    <p class="sub1">- 19...</p>
+                    <p class="sub1">- Bangalore, India</p>
+                </div>
+                <div style="color: white; padding-top:40px;">
+                    <p class="sub1">>> Techy++</p>
+                    <p class="sub1">>> 24/7 on songs</p>
+                    <p class="sub1">>> Marketing++ </p>
+                </div>
+                <div>
+                    <img src="assets/guy.gif" alt="guy gif" style="height: 100px; width: 100px; object-fit: cover; object-position: center; padding: 0px 20px; ">
+                </div>
             </div>
         </div>
         <!-- skills -->
         <div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.3); padding:5px"></div>
+            <div class="devider-t"></div>
             <p style="font-size: 24px; margin:0px; padding-bottom: 10px; color:white">[▣] Skillz</p>
-            <div class="skill">
+            <div class="head">
                 <div>
-                    <p style="margin:0px; font-size: 18px;">- Communication</p>
-                    <p style="margin:0px; font-size: 18px;">- Leadership</p>
-                    <p style="margin:0px; font-size: 18px;">- Critical Thinking</p>
+                    <p class="sub1";>- Communication</p>
+                    <p class="sub1";>- Leadership</p>
+                    <p class="sub1";>- Critical Thinking</p>
                 </div>
                 <div>
-                    <p style="margin:0px; font-size: 18px;">- Teamwork</p>
-                    <p style="margin:0px; font-size: 18px;">- Project Management</p>
-                    <p style="margin:0px; font-size: 18px;">- Creative Thinking</p>
+                    <p class="sub1">- Teamwork</p>
+                    <p class="sub1">- Project Management</p>
+                    <p class="sub1">- Creative Thinking</p>
                 </div>
                 <div>
-                    <p style="margin:0px; font-size: 18px;">- Adabtibility</p>
-                    <p style="margin:0px; font-size: 18px;">- Analytical Skills</p>
-                    <p style="margin:0px; font-size: 18px;">- Time Management</p>
+                    <p class="sub1">- Adabtibility</p>
+                    <p class="sub1">- Analytical Skills</p>
+                    <p class="sub1">- Time Management</p>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255, 255, 255, 0.3); padding:5px"></div>
+            <div class="devider-d"></div>
         </div>
         <!-- footer -->
         <div class="imgfoot">
@@ -83,6 +114,16 @@
             </div>
         </div>
     </main>
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Your JS File -->
+    <script src="script.js" defer></script>
+
+    <!-- Rain container in body -->
+    <div class="rain-container"></div>
+
+    <audio id="bgMusic" src="assets/audio/seven.mp3" autoplay></audio>
     <script src="script.js" data-cat="assets/oneko.gif"></script>
 </body>
 </html>
