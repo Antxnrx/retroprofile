@@ -1,11 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+
+* {
+  cursor: url(https://cur.cursors-4u.net/symbols/sym-7/sym630.ani),
+          url(https://cur.cursors-4u.net/symbols/sym-7/sym629.png),
+          auto !important;
+}
+a, button, input[type="button"], input[type="submit"], label {
+  cursor: pointer !important;
+}
+
+
 body{
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    cursor: url('/assets/cursor.png') x y, auto;
+    font-family: "Micro 5", sans-serif;
 }
+
 
 
 .s1{
@@ -24,7 +38,87 @@ body{
     margin:10px;
 }
 
-marquee{
-    color:white;
-    padding:0px;
+.marquee-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 15s linear infinite;
+  color: white;
+  font-size: 18px;
 }
+  
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* About me  */
+.a1{
+  display:flex;
+}
+
+
+
+
+/* Skills section */
+.skill{
+  padding-left:3px;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+/* Footer section */
+.imgfoot img{
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.footer{
+  color:white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:0px;
+}
+
+.f1{
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  padding-left:20px;
+}
+.f1 a {
+  display: inline-block;
+}
+
+.f1 a img {
+  display: block;
+}
+
+.fd img{
+  height:20px;
+  width:20px;
+  padding: 0px 3px;
+}
+
+.f2{
+  color:white;
+  margin:0px;
+  padding-right:20px;
+}
+     
+
+                    
+                    
